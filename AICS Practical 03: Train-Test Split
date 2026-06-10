@@ -1,0 +1,29 @@
+import numpy as np
+from sklearn.model_selection import train_test_split
+
+X = np.array([
+    [25, 50000],
+    [30, 60000],
+    [35, 70000],
+    [40, 80000],
+    [45, 90000],
+    [50, 100000]
+])
+
+y = np.array([0, 1, 0, 1, 0, 1])
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=42
+)
+
+print("Training Features:")
+print(X_train)
+
+print("Testing Features:")
+print(X_test)
+
+print("Training Labels:")
+print(y_train)
+
+print("Testing Labels:")
+print(y_test)
